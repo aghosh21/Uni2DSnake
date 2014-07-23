@@ -14,7 +14,6 @@ public class Food : MonoBehaviour {
 	public Texture2D foodTexture;
 	public List<Texture2D> SpriteList = new List<Texture2D>();
 	public Texture2D oldFoodTexture;
-	public int foodID;
 	public HeroClass Monster = new HeroClass ();
 	public HeroClass Thief = new HeroClass();
 	public HeroClass Warrior = new HeroClass ();
@@ -29,7 +28,6 @@ public class Food : MonoBehaviour {
 			if (instance == null)
 			{
 				instance = new GameObject("Food").AddComponent<Food>();
-
 			}
 			
 			return instance;
@@ -52,7 +50,7 @@ public class Food : MonoBehaviour {
 	}
 
 	public void LoadSprites() {
-		Monster.SetUpAvatar ("Monster", 50, 13, 5, false, Resources.Load ("BadMonster") as Texture2D);
+		Monster.SetUpAvatar ("Monster", 50, 20, 5, false, Resources.Load ("BadMonster") as Texture2D);
 		Thief.SetUpAvatar ("Thief", 50, 10, 10, false, Resources.Load ("BadThief") as Texture2D);
 		Warrior.SetUpAvatar ("Warrior", 50, 15, 10, true, Resources.Load ("Warrior") as Texture2D);
 		Wizard.SetUpAvatar ("Wizard", 50, 5, 10, true, Resources.Load ("Wizard") as Texture2D);

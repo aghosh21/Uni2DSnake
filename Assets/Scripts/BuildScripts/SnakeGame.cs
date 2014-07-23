@@ -62,7 +62,7 @@ public class SnakeGame : MonoBehaviour
 		
 		// clamp to 0 if lower
 		gameLives = Mathf.Clamp(gameLives, 0, gameLives);
-		
+
 		// update our display
 		displayLives.text = "Lives " + gameLives.ToString();
 	}
