@@ -64,7 +64,7 @@ public class SnakeGame : MonoBehaviour
 		gameLives = Mathf.Clamp(gameLives, 0, gameLives);
 
 		// update our display
-		displayLives.text = "Lives " + gameLives.ToString();
+		displayLives.text = "Lives " + gameLives;
 	}
 	
 
@@ -79,7 +79,7 @@ public class SnakeGame : MonoBehaviour
 		
 		// initialize SnakeGame variables
 		gameScore = 0; // no score initially
-		gameLives = 1; // 3 lives to start with
+		gameLives = 1; // 1 lives to start with
 		scoreMultiplier = 100; // adjusts score display		
 		//Food.Instance.UpdateFood ();
 		// setup our snake game border background

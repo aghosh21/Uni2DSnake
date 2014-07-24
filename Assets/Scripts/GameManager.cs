@@ -8,14 +8,17 @@ public class GameManager : MonoBehaviour
 
 	void Start () 
 	{
-		// build our SnakeGame object
-		SnakeGame.Instance.Initialize();
-		
-		
+
 		// build our Food object
 		Food.Instance.Initialize();
 		
 		// build our Snake object
-		Snake.Instance.Initialize ();		
+		Snake.Instance.Initialize ();
+
+		// build our SnakeGame object
+		SnakeGame.Instance.Initialize();
+
+
+
 	}	
 }

@@ -160,7 +160,7 @@ public class Snake : MonoBehaviour
 						
 						// increment our snake length
 						snakeLength++;
-						
+
 						// decrement our moveDelay
 						moveDelay = Mathf.Max(0.05f, moveDelay - 0.01f);
 						
@@ -473,29 +473,26 @@ public class Snake : MonoBehaviour
 	
 	private bool CheckForFood()
 	{
-		if (Food.Instance != null) {
+		if(Food.Instance != null)
+		{
 			Rect foodRect = Food.Instance.foodPos;
-			Texture2D foodIcon = Food.Instance.foodTexture;
-			
-			if (snakePos [0].Contains (new Vector2 (foodRect.x, foodRect.y))) {
-				HeroClass hero = new HeroClass();
-				hero = Food.Instance.GetHeroTypeFromTexture(foodIcon);
-				if (hero.isHero) {
-					// we re-position the food
-					Food.Instance.UpdateFood ();
-					Food.Instance.setFoodTexture ();
-					// we add to our score
-					SnakeGame.Instance.UpdateScore (1);
-					SnakeGame.Instance.UpdateLives (1);
-					return true;
-				} else {
-				 	return Combat(hero, hero.Heart, 0);
-
-				}
+			if (snakePos[0].Contains(new Vector2(foodRect.x,foodRect.y)))
+			{
+				
+				Debug.Log ("We hit the food");
+				
+				// we re-position the food
+				Food.Instance.UpdateFood();
+				
+				// we add to our score
+				SnakeGame.Instance.UpdateScore(1);
+				SnakeGame.Instance.UpdateLives(1);
+				snakeLength++;
+				return true;
 			}
-			
 		}
-		return false;
+			
+			return false;
 	}
 
 
@@ -508,7 +505,7 @@ public class Snake : MonoBehaviour
 	 * Lowest Damage possible is 1
 	 * When a Hero attack an Enemy of the same Type, the Hero’s Sword value will be multiplied by 2
 	 * 
-	 **/
+	 *
 	 private bool Combat(HeroClass attacker, int attackerhealth, int currentBattle) {
 
 		int attackerHealth = attackerhealth;
@@ -544,7 +541,8 @@ public class Snake : MonoBehaviour
 		}
 		return false;
 	}
-	
+	*/
+
 	private Rect CheckForValidDownPosition()
 	{
 		if (snakePos[snakePos.Count-1].y != 654)
@@ -592,7 +590,7 @@ public class Snake : MonoBehaviour
 	private void BuildSnakeSegment(Rect rctPos)
 	{
 		Texture2D temp = Food.Instance.oldFoodTexture;
-		snakeHeros.Add(Food.Instance.GetHeroTypeFromTexture(temp));
+		//snakeHeros.Add(Food.Instance.GetHeroTypeFromTexture(temp));
 		snakeIcon.Add (temp);
 		snakePos.Add(rctPos);
 		snakeLength++;
@@ -626,7 +624,7 @@ public class Snake : MonoBehaviour
 	
 	void OnGUI()
 	{
-		for (int i = 0; i < snakeLength; i++)
+		for (int i = 0; i < SnakeGame.Instance.gameLives; i++)
 		{
 			GUI.DrawTexture(snakePos[i], snakeIcon[i]);
 		}
@@ -636,7 +634,7 @@ public class Snake : MonoBehaviour
 		starter.SetUpAvatar ("Starter", 50, 20, 15, true, Resources.Load ("Starting") as Texture2D);
 		Health = starter.Heart;
 	}
-
+	/*
 	public HeroClass GetHeroTypeFromTexture(Texture2D avatar) {
 		string answer = avatar.ToString ();
 		if (answer.Contains("Bad")) {
@@ -652,7 +650,8 @@ public class Snake : MonoBehaviour
 			return Food.Instance.Warrior;
 		}
 	}
-	
+	*/
+
 	public void Initialize()
 	{
 		

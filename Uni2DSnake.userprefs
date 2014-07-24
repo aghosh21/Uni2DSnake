@@ -1,14 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildScripts/Snake.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildScripts/Food.cs">
     <Files>
-      <File FileName="Assets/Scripts/BuildScripts/Snake.cs" Line="491" Column="7" />
-      <File FileName="Assets/Scripts/BuildScripts/Food.cs" Line="142" Column="4" />
-      <File FileName="Assets/Scripts/Utils/TextureHelper.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Utils/GUIHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BuildScripts/Snake.cs" Line="670" Column="55" />
+      <File FileName="Assets/Scripts/BuildScripts/Food.cs" Line="52" Column="1" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BuildScripts/SnakeGame.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BuildScripts/HeroClass.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BuildScripts/HeroClass.cs" Line="30" Column="17" />
+      <File FileName="Assets/Scripts/BuildScripts/CreateHero.cs" Line="12" Column="25" />
+      <File FileName="../Uni2DSnake Copy1/Assets/Scripts/BuildScripts/Food.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
               <Node name="BuildScripts" expanded="True">
-                <Node name="Snake.cs" selected="True" />
+                <Node name="Food.cs" selected="True" />
               </Node>
               <Node name="Utils" expanded="True" />
             </Node>
@@ -29,7 +29,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/visheshsood/Uni2DSnake/Assets/Scripts/BuildScripts/Food.cs" line="50" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
